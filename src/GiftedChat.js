@@ -557,6 +557,7 @@ GiftedChat.defaultProps = {
   maxInputLength: null,
   forceGetKeyboardHeight: false,
   inverted: true,
+  systemMessageParsePatterns: () => [],
 };
 
 GiftedChat.propTypes = {
@@ -607,6 +608,7 @@ GiftedChat.propTypes = {
   forceGetKeyboardHeight: PropTypes.bool,
   inverted: PropTypes.bool,
   textInputProps: PropTypes.object,
+  systemMessageParsePatterns: PropTypes.func,
 };
 
 export {
