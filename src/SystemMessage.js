@@ -6,14 +6,14 @@ import PropTypes from 'prop-types';
 import Color from './Color';
 import ParsedText from 'react-native-parsed-text';
 
-export default function SystemMessage({ currentMessage, containerStyle, wrapperStyle, textStyle }) {
+export default function SystemMessage({ currentMessage, containerStyle, wrapperStyle, textStyle, systemMessageParsePatterns }) {
   return (
     <View style={[styles.container, containerStyle]}>
       <View style={[styles.wrapper, wrapperStyle]}>
         <ParsedText
-          style={[styles.text, this.props.textStyle]}
+          style={[styles.text, textStyle]}
           parse={[
-            ...this.props.systemMessageParsePatterns(currentMessage),
+            ...systemMessageParsePatterns(currentMessage),
           ]}
         >
           {currentMessage.text}
