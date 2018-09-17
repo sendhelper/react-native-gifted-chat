@@ -146,6 +146,7 @@ export default class MessageContainer extends React.PureComponent {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingBottom: 30,
   },
   contentContainerStyle: {
     justifyContent: 'flex-end',
